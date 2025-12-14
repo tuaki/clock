@@ -7,5 +7,5 @@ setupLayout(document.documentElement);
 
 const timeElement = document.getElementById('time')!;
 
-setupTime(timeElement);
 setupScreenLock(timeElement);
+setupTime(timeElement);

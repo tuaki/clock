@@ -9,6 +9,7 @@ async function toggleWakeLock(element: HTMLElement) {
     if (wakeLock) {
         await releaseWakeLock();
         element.classList.remove('locked');
+        document.exitFullscreen();
         return;
     }
 
@@ -17,8 +18,11 @@ async function toggleWakeLock(element: HTMLElement) {
 
     wakeLockRequest = createWakeLockRequest();
     const result = await wakeLockRequest;
-    if (result)
+    if (result) {
         element.classList.add('locked');
+        // This is not necessary so we don't await it.
+        document.documentElement.requestFullscreen();
+    }
 }
 
 async function createWakeLockRequest(): Promise<boolean> {
