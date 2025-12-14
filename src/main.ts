@@ -1,4 +1,11 @@
 import './style.css';
+import { setupLayout } from './layout.ts';
 import { setupTime } from './time.ts';
+import { setupScreenLock } from './screenLock.ts';
 
-setupTime(document.getElementById('time')!);
+setupLayout(document.documentElement);
+
+const timeElement = document.getElementById('time')!;
+
+setupTime(timeElement);
+setupScreenLock(timeElement);
