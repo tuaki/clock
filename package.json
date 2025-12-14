@@ -1,0 +1,25 @@
+{
+    "name": "clock",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "types": "bun tsc --build --verbose",
+        "lint": "bun run eslint --config eslint.full.config.ts --cache --fix --quiet",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@eslint/compat": "^1.4.0",
+        "@eslint/js": "^9.36.0",
+        "@stylistic/eslint-plugin": "^5.4.0",
+        "@tailwindcss/vite": "^4.1.11",
+        "@types/node": "^20.14.9",
+        "eslint": "^9.36.0",
+        "globals": "^16.4.0",
+        "typescript": "~5.9.3",
+        "typescript-eslint": "^8.44.1",
+        "vite": "^7.2.4"
+    }
+}
