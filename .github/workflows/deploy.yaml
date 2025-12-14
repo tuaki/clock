@@ -22,7 +22,7 @@ jobs:
       #- run: echo "${{ vars.DOT_ENV }}" > .env
 
       - run: bun install
-      - run: bun run build
+    - run: bun run build --base=${{ vars.BASE }}
 
       - uses: actions/upload-artifact@v4
         with:
