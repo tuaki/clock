@@ -14,15 +14,14 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: node:latest
     environment: github-pages
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
 
       #- run: echo "${{ vars.DOT_ENV }}" > .env
 
       - run: bun install
-
       - run: bun run build
 
       - uses: actions/upload-artifact@v4
