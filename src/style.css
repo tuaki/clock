@@ -32,10 +32,10 @@ body::before {
     pointer-events: none;
     background: repeating-linear-gradient(
         to right,
-        rgba(124,255,178,0.05),
-        rgba(124,255,178,0.05) 1px,
+        rgba(124,255,178,0.04),
+        rgba(124,255,178,0.04) 1px,
         transparent 1px,
-        transparent 5px
+        transparent 4px
     );
 }
 
