@@ -1,12 +1,14 @@
 export function setupTime(element: HTMLElement) {
     const time = new Date();
+    const millisecondsUntilNextSecond = 1000 - time.getMilliseconds();
 
     renderTime(element, time);
 
-    setInterval(() => {
-        renderTime(element, new Date());
-        // This is probably not the most precise but it's good enough for now.
-    }, 1000);
+    console.log(millisecondsUntilNextSecond);
+
+    setTimeout(() => {
+        setupTime(element);
+    }, millisecondsUntilNextSecond);
 }
 
 function renderTime(element: HTMLElement, time: Date) {
